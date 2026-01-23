@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DawaCare — My Account</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background:
+          linear-gradient(rgba(0, 0, 0, 0.446), rgba(0, 0, 0, 0.596)),
+          url(./arpad-czapp-tvP6pCnq9iI-unsplash.jpg) no-repeat center center
+            fixed;
+        background-size: cover;
+      }
+      header {
+        background: #1565c0;
+        color: white;
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        background: #0d47a1;
+        padding: 10px;
+        text-align: center;
+      }
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+      .container {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 10px;
+      }
+      .card {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .card h2 {
+        color: #1565c0;
+        margin-bottom: 10px;
+      }
+      .card h3 {
+        color: #333;
+        margin-top: 20px;
+      }
+      form input,
+      form textarea,
+      form select {
+        width: 100%;
+        padding: 8px;
+        margin: 6px 0;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      form button {
+        background-color: #1565c0;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-right: 10px;
+      }
+      form button:hover {
+        background-color: #0d47a1;
+      }
+      .stars {
+        color: #ffb300; /* golden yellow */
+        font-size: 1.2em;
+        margin: 8px 0;
+        cursor: pointer;
+      }
+      label input[type="checkbox"] {
+        margin-right: 6px;
+      }
+      footer {
+        background: #eee;
+        text-align: center;
+        padding: 15px;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>DawaCare — My Account</h1></header>
+    <nav>
+      <a href="./index.html">Home</a>
+      <a href="./providers.html">Find a Provider</a>
+      <a href="./catalog.html">Pharmacy</a>
+      <a href="./account.html">My Account</a>
+      <a href="./doctor-register.html">Join as a Doctor</a>
+    </nav>
+
+    <div class="container">
+      <!-- Editable Profile Section -->
+      <div class="card">
+        <h2>Edit Profile</h2>
+        <form>
+          <label for="name">Name:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter full name"
+          /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter valid email"
+          /><br /><br />
+
+          <label for="phone">Phone:</label><br />
+          <input
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Enter valid phone number"
+          /><br /><br />
+
+          <button type="submit">Save Changes</button>
+        </form>
+      </div>
+
+      <!-- Editable Appointments Section -->
+      <div class="card">
+        <h2>Appointments</h2>
+
+        <!-- Upcoming Appointment -->
+        <h3>Upcoming</h3>
+        <form>
+          <label for="appt-date1">Date:</label><br />
+          <input
+            type="date"
+            id="appt-date1"
+            name="appt-date1"
+            value="2026-02-14"
+          /><br /><br />
+
+          <label for="appt-time1">Time:</label><br />
+          <input
+            type="time"
+            id="appt-time1"
+            name="appt-time1"
+            value="10:00"
+          /><br /><br />
+
+          <label for="appt-provider1">Provider:</label><br />
+          <input
+            type="text"
+            id="appt-provider1"
+            name="appt-provider1"
+            value="Dr. Amina"
+          /><br /><br />
+
+          <label for="appt-notes1">Notes:</label><br />
+          <textarea id="appt-notes1" name="appt-notes1" rows="3">
+Follow-up consultation</textarea
+          ><br /><br />
+
+          <button type="submit">Save Appointment</button>
+        </form>
+
+        <!-- Past Appointment -->
+        <h3>Past</h3>
+        <form>
+          <label for="appt-date2">Date:</label><br />
+          <input
+            type="date"
+            id="appt-date2"
+            name="appt-date2"
+            value="2026-01-10"
+          /><br /><br />
+
+          <label for="appt-provider2">Provider:</label><br />
+          <input
+            type="text"
+            id="appt-provider2"
+            name="appt-provider2"
+            value="Pharm. Brian"
+          /><br /><br />
+
+          <label for="appt-notes2">Notes:</label><br />
+          <textarea id="appt-notes2" name="appt-notes2" rows="3">
+Pharmacy visit</textarea
+          ><br /><br />
+
+          <!-- Rating -->
+          <p class="stars">Rate Experience: ★★★★☆</p>
+
+          <!-- Completion -->
+          <label>
+            <input type="checkbox" name="completed" checked />
+            Mark as Completed </label
+          ><br /><br />
+
+          <button type="submit">Save Appointment</button>
+        </form>
+      </div>
+
+      <!-- Editable Prescriptions Section -->
+      <div class="card">
+        <h2>Prescriptions & Orders</h2>
+
+        <!-- Prescription 1 -->
+        <form>
+          <label for="drug1">Drug Name:</label><br />
+          <input
+            type="text"
+            id="drug1"
+            name="drug1"
+            value="Paracetamol 500mg"
+          /><br /><br />
+
+          <label for="date1">Date:</label><br />
+          <input
+            type="date"
+            id="date1"
+            name="date1"
+            value="2026-01-05"
+          /><br /><br />
+
+          <label for="status1">Status:</label><br />
+          <input
+            type="text"
+            id="status1"
+            name="status1"
+            value="Purchased"
+          /><br /><br />
+
+          <!-- Completion -->
+          <label>
+            <input type="checkbox" name="delivered" checked />
+            Mark as Delivered </label
+          ><br /><br />
+
+          <button type="submit">Save Prescription</button>
+        </form>
+
+        <!-- Prescription 2 -->
+        <form>
+          <label for="drug2">Drug Name:</label><br />
+          <input
+            type="text"
+            id="drug2"
+            name="drug2"
+            value="Amoxicillin 250mg"
+          /><br /><br />
+
+          <label for="date2">Date:</label><br />
+          <input
+            type="date"
+            id="date2"
+            name="date2"
+            value="2025-12-20"
+          /><br /><br />
+
+          <label for="status2">Status:</label><br />
+          <input
+            type="text"
+            id="status2"
+            name="status2"
+            value="Prescribed"
+          /><br /><br />
+
+          <!-- Completion -->
+          <label>
+            <input type="checkbox" name="delivered" />
+            Mark as Delivered </label
+          ><br /><br />
+
+          <button type="submit">Save Prescription</button>
+        </form>
+      </div>
+
+      <!-- Editable Settings Section -->
+      <div class="card">
+        <h2>Settings</h2>
+        <form>
+          <!-- Change Password -->
+          <label for="password">Old Password:</label><br />
+          <input type="password" id="password" name="password" /><br /><br />
+
+          <label for="password">New Password:</label><br />
+          <input type="password" id="password" name="password" /><br /><br />
+
+          <label for="password">Repeat New Password:</label><br />
+          <input type="password" id="password" name="password" /><br /><br />
+
+          <!-- Notification Preferences -->
+          <label for="notifications">Notifications:</label><br />
+          <select id="notifications" name="notifications">
+            <option value="all">All Notifications</option>
+            <option value="important">Only Important</option>
+            <option value="none">None</option></select
+          ><br /><br />
+
+          <!-- Privacy -->
+          <label>
+            <input type="checkbox" name="privacy" checked />
+            Keep my profile private </label
+          ><br /><br />
+
+          <button type="submit">Save Settings</button>
+          <button type="button">Logout</button>
+        </form>
+      </div>
+    </div>
+
+    <footer>
+      &copy; 2026 DawaCare — Health and privacy compliance is a priority.
+    </footer>
+  </body>
+</html>

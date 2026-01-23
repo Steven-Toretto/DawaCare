@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DawaCare — Drug Catalog</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; background:linear-gradient(rgba(0, 0, 0, 0.446),rgba(0, 0, 0, 0.596)),
+                url(./arpad-czapp-tvP6pCnq9iI-unsplash.jpg) no-repeat center center fixed;
+      background-size: cover;}
+    header { background:#1565C0; color:white; padding:20px; text-align:center; }
+    nav { background:#0d47a1; padding:10px; text-align:center; }
+    nav a { color:white; margin:0 15px; text-decoration:none; font-weight:bold; }
+    .container { max-width:1100px; margin:20px auto; padding:10px; }
+      /* Search bar styling */
+    .card h2 { color:#1565C0; margin-bottom:10px; }
+    .search-bar {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 16px;
+    }
+    .drug-card {
+      background:white; border-radius:10px; padding:20px; margin-bottom:20px;
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+    
+    .container h2 { color:#1565C0; margin-bottom:10px; }
+    .badge { display:inline-block; background:#e8f5e9; color:#2e7d32;
+             padding:4px 8px; border-radius:999px; margin-right:6px; }
+    .price { font-weight:bold; color:#c62828; }
+    footer { background:#eee; text-align:center; padding:15px; margin-top:30px; }
+    .container button {
+      background-color: #1565C0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+    .container button:hover { background-color: #0d47a1; }
+
+    @media (max-width: 600px) {
+        .search-bar {
+          width: 95%;
+        }
+      }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DawaCare — Drug Catalog</h1>
+  </header>
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./providers.html">Find a Provider</a>
+    <a href="./catalog.html">Pharmacy</a>
+    <a href="./account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </nav>
+
+  <div class="container">
+    <h2 id="search-hed">Available Medicines</h2>
+    <input type="text" class="search-bar" placeholder="Search medicines...">
+    <div class="drug-card">
+      <h2>Paracetamol 500mg</h2>
+      <p><span class="badge">Pain Relief</span> <span class="badge">OTC</span></p>
+      <p>Used to relieve mild to moderate pain and reduce fever.</p>
+      <p class="price">Price: KSh 150</p>
+      <button type="submit">Order Medicine</button>
+    </div>
+
+    <div class="drug-card">
+      <h2>Amoxicillin 250mg</h2>
+      <p><span class="badge">Antibiotic</span> <span class="badge">Prescription Only</span></p>
+      <p>Treats bacterial infections such as pneumonia, bronchitis, and ear infections.</p>
+      <p class="price">Price: KSh 500</p>
+      <button type="submit">Order Medicine</button>
+    </div>
+
+    <div class="drug-card">
+      <h2>Metformin 500mg</h2>
+      <p><span class="badge">Diabetes</span> <span class="badge">Prescription Only</span></p>
+      <p>Helps control blood sugar levels in patients with type 2 diabetes.</p>
+      <p class="price">Price: KSh 800</p>
+      <button type="submit">Order Medicine</button>
+    </div>
+    <div class="drug-card">
+      <h2>Paracetamol 500mg</h2>
+      <p><span class="badge">Pain Relief</span> <span class="badge">OTC</span></p>
+      <p>Used to relieve mild to moderate pain and reduce fever.</p>
+      <p class="price">Price: KSh 150</p>
+      <button type="submit">Order Medicine</button>
+    </div>
+
+    <div class="drug-card">
+      <h2>Amoxicillin 250mg</h2>
+      <p><span class="badge">Antibiotic</span> <span class="badge">Prescription Only</span></p>
+      <p>Treats bacterial infections such as pneumonia, bronchitis, and ear infections.</p>
+      <p class="price">Price: KSh 500</p>
+      <button type="submit">Order Medicine</button>
+    </div>
+
+    <div class="drug-card">
+      <h2>Metformin 500mg</h2>
+      <p><span class="badge">Diabetes</span> <span class="badge">Prescription Only</span></p>
+      <p>Helps control blood sugar levels in patients with type 2 diabetes.</p>
+      <p class="price">Price: KSh 800</p>
+      <button type="submit">Order Medicine</button>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 DawaCare — Health and privacy compliance is a priority.
+  </footer>
+</body>
+</html>

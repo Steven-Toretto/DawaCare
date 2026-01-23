@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Doctor Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),url(./arpad-czapp-tvP6pCnq9iI-unsplash.jpg) no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: rgba(21, 101, 192, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: rgba(13, 71, 161, 0.9);
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: rgba(255,255,255,0.9);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+    h2 {
+      color: #1565C0;
+      text-align: center;
+    }
+    form label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 6px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: #1565C0;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      margin-top: 15px;
+      width: 100%;
+    }
+    form button:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DawaCare — Doctor Registration</h1>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="providers.html">Find a Provider</a>
+    <a href="catalog.html">Pharmacy</a>
+    <a href="account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </nav>
+
+  <div class="container">
+    <h2>Register as a Doctor</h2>
+    <form action="submit-doctor.php" method="POST" enctype="multipart/form-data">
+      <label for="doc-name">Full Name:</label>
+      <input type="text" id="doc-name" name="doc-name" required>
+
+      <label for="doc-specialty">Specialty:</label>
+      <input type="text" id="doc-specialty" name="doc-specialty" required>
+
+      <label for="doc-email">Email:</label>
+      <input type="email" id="doc-email" name="doc-email" required>
+
+      <label for="doc-phone">Phone:</label>
+      <input type="tel" id="doc-phone" name="doc-phone">
+
+      <label for="doc-qualifications">Qualifications:</label>
+      <textarea id="doc-qualifications" name="doc-qualifications" rows="3"></textarea>
+
+      <label for="doc-photo">Upload Profile Photo:</label>
+      <input type="file" id="doc-photo" name="doc-photo" accept="image/*">
+
+      <button type="submit">Submit Details</button>
+    </form>
+  </div>
+</body>
+</html>
