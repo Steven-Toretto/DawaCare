@@ -1,163 +1,261 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DawaCare — Providers</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.446), rgba(0, 0, 0, 0.596)),
-          url(./arpad-czapp-tvP6pCnq9iI-unsplash.jpg) no-repeat center center
-            fixed;
-        background-size: cover;
-      }
-      header {
-        background: #1565c0;
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
-      nav {
-        background: #0d47a1;
-        padding: 10px;
-        text-align: center;
-      }
-      nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .container {
-        max-width: 1100px;
-        margin: 20px auto;
-        padding: 10px;
-      }
-      .grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-      }
-      #doc {
-        color: white;
-      }
-      .provider-card {
-        background: white;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
-      .provider-card h2 {
-        color: #1565c0;
-        margin-bottom: 10px;
-      }
-      .stars {
-        color: #ffb300;
-        font-size: 1.2em;
-      }
-      .badge {
-        display: inline-block;
-        background: #e8f5e9;
-        color: #2e7d32;
-        padding: 4px 8px;
-        border-radius: 999px;
-        margin-right: 6px;
-      }
-      footer {
-        background: #eee;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-      }
-      @media(max-width:600px){
-        .badge{
-          margin: 5px 0;
-        }
-        .provider-card h2{
-          font-size: 25px;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header><h1>DawaCare — Providers</h1></header>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./providers.html">Find a Provider</a>
-      <a href="./catalog.html">Pharmacy</a>
-      <a href="./account.html">My Account</a>
-      <a href="./doctor-register.html">Join as a Doctor</a>
-    </nav>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find a Provider</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+                  url('images/healthcare-bg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+    }
+    header {
+      background: rgba(21, 101, 192, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: rgba(13, 71, 161, 0.9);
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
 
-    <div class="container">
-      <h2 id="doc">Doctors</h2>
-      <div class="grid">
-        <div class="provider-card">
-          <h2>Dr. Amina N. ✅</h2>
-          <p><span class="stars">★★★★☆</span> 4.8 / 5</p>
-          <p><span class="badge">Family Medicine</span></p>
-          <p>Location: Nairobi</p>
-        </div>
-        <div class="provider-card">
-          <h2>Dr. Carol O. ✅</h2>
-          <p><span class="stars">★★★★★</span> 4.9 / 5</p>
-          <p><span class="badge">Pediatrics</span></p>
-          <p>Location: Kilimani</p>
-        </div>
-        <div class="provider-card">
-          <h2>Dr. Carol O. ✅</h2>
-          <p><span class="stars">★★★★★</span> 4.9 / 5</p>
-          <p><span class="badge">Pediatrics</span></p>
-          <p>Location: Kilimani</p>
-        </div>
-        <div class="provider-card">
-          <h2>Dr. Amina N. ✅</h2>
-          <p><span class="stars">★★★★☆</span> 4.8 / 5</p>
-          <p><span class="badge">Family Medicine</span></p>
-          <p>Location: Nairobi</p>
-        </div>
-      </div>
-      <!--  -->
-      <h2 style="margin-top: 40px" id="doc">Pharmacists</h2>
-      <div class="grid">
-        <div class="provider-card">
-          <h2>Pharm. Brian K. ✅</h2>
-          <p><span class="stars">★★★★★</span> 4.6 / 5</p>
-          <p><span class="badge">Clinical Pharmacy</span></p>
-          <p>Location: Westlands</p>
-        </div>
-        <div class="provider-card">
-          <h2>Pharm. Daniel M. ✅</h2>
-          <p><span class="stars">★★★★☆</span> 4.7 / 5</p>
-          <p>
-            <span class="badge">Oncology</span>
-            <span class="badge">Clinical Pharmacy</span>
-          </p>
-          <p>Location: Upper Hill</p>
-        </div>
-        <div class="provider-card">
-          <h2>Pharm. Daniel M. ✅</h2>
-          <p><span class="stars">★★★★☆</span> 4.7 / 5</p>
-          <p>
-            <span class="badge">Oncology</span>
-            <span class="badge">Clinical Pharmacy</span>
-          </p>
-          <p>Location: Upper Hill</p>
-        </div>
-        <div class="provider-card">
-          <h2>Pharm. Brian K. ✅</h2>
-          <p><span class="stars">★★★★★</span> 4.6 / 5</p>
-          <p><span class="badge">Clinical Pharmacy</span></p>
-          <p>Location: Westlands</p>
-        </div>
-      </div>
+    .filters {
+      background: rgba(255,255,255,0.9);
+      padding: 15px;
+      text-align: center;
+    }
+    .filters label, .filters select {
+      margin: 0 10px;
+      font-weight: bold;
+    }
+    .filters button {
+      background-color: #1565C0;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .filters button:hover {
+      background-color: #0d47a1;
+    }
+
+    .provider-card {
+      background: rgba(255,255,255,0.95);
+      border-radius: 8px;
+      padding: 15px;
+      margin: 15px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .provider-card img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      margin-right: 15px;
+      object-fit: cover;
+    }
+    .provider-info {
+      flex: 1;
+    }
+    .provider-card h3 {
+      color: #1565C0;
+      margin-bottom: 5px;
+    }
+    .provider-card p {
+      margin: 5px 0;
+    }
+    .stars {
+      color: gold;
+      font-size: 1.1em;
+    }
+    .view-link {
+      background-color: #1565C0;
+      color: white;
+      padding: 8px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .view-link:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>DawaCare — Find a Provider</h1>
+  </header>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./providers.html">Find a Provider</a>
+    <a href="./catalog.html">Pharmacy</a>
+    <a href="./account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </nav>
+
+  <!-- Filters -->
+  <div class="filters">
+    <label for="locationFilter">Location:</label>
+    <select id="locationFilter">
+      <option value="">Any</option>
+      <option value="Nairobi">Nairobi</option>
+      <option value="Mombasa">Mombasa</option>
+      <option value="Kisumu">Kisumu</option>
+    </select>
+
+    <label for="specialtyFilter">Specialty:</label>
+    <select id="specialtyFilter">
+      <option value="">Any</option>
+      <option value="Pediatrician">Pediatrician</option>
+      <option value="Pharmacist">Pharmacist</option>
+      <option value="Dermatologist">Dermatologist</option>
+    </select>
+
+    <label>
+      <input type="checkbox" id="availabilityFilter"> Check Availability
+    </label>
+
+    <button id="searchBtn">Search</button>
+  </div>
+
+  <!-- Provider Cards -->
+  <div class="provider-card" 
+       data-location="Nairobi" 
+       data-specialty="Pediatrician" 
+       data-available="true">
+    <img src="./images/doctor-icon.svg" alt="Dr. Sarah Johnson">
+    <div class="provider-info">
+      <h3>Dr. Sarah Johnson</h3>
+      <p>Pediatrician — Nairobi</p>
+      <p>Available Now ✅</p>
+      <p class="stars">★★★★★</p>
     </div>
+    <a href="./profile-sarah-johnson.html" class="view-link">View Profile</a>
+  </div>
 
-    <footer>
-      &copy; 2026 DawaCare — Health and privacy compliance is a priority.
-    </footer>
-  </body>
+  <div class="provider-card" 
+       data-location="Mombasa" 
+       data-specialty="Pharmacist" 
+       data-available="false">
+    <img src="./images/doctor-icon.svg" alt="Dr. James Otieno">
+    <div class="provider-info">
+      <h3>Dr. James Otieno</h3>
+      <p>Pharmacist — Mombasa</p>
+      <p>Currently Unavailable ❌</p>
+      <p class="stars">★★★★☆</p>
+    </div>
+    <a href="./profile-sarah-johnson.html" class="view-link">View Profile</a>
+  </div>
+
+  <div class="provider-card" 
+       data-location="Kisumu" 
+       data-specialty="Dermatologist" 
+       data-available="true">
+    <img src="./images/doctor-icon.svg" alt="Dr. Aisha Khan">
+    <div class="provider-info">
+      <h3>Dr. Aisha Khan</h3>
+      <p>Dermatologist — Kisumu</p>
+      <p>Available Now ✅</p>
+      <p class="stars">★★★★☆</p>
+    </div>
+    <a href="./profile-sarah-johnson.html" class="view-link">View Profile</a>
+  </div>
+
+  <div class="provider-card" 
+       data-location="Nairobi" 
+       data-specialty="Pediatrician" 
+       data-available="true">
+    <img src="./images/doctor-icon.svg" alt="Dr. Sarah Johnson">
+    <div class="provider-info">
+      <h3>Dr. Sarah Johnson</h3>
+      <p>Pediatrician — Nairobi</p>
+      <p>Available Now ✅</p>
+      <p class="stars">★★★★★</p>
+    </div>
+    <a href="./profile-sarah-johnson.html" class="view-link">View Profile</a>
+  </div>
+
+  <div class="provider-card" 
+       data-location="Mombasa" 
+       data-specialty="Pharmacist" 
+       data-available="false">
+    <img src="./images/doctor-icon.svg" alt="Dr. James Otieno">
+    <div class="provider-info">
+      <h3>Dr. James Otieno</h3>
+      <p>Pharmacist — Mombasa</p>
+      <p>Currently Unavailable ❌</p>
+      <p class="stars">★★★★☆</p>
+    </div>
+    <a href="./profile-sarah-johnson.html" class="view-link">View Profile</a>
+  </div>
+
+  <div class="provider-card" 
+       data-location="Kisumu" 
+       data-specialty="Dermatologist" 
+       data-available="true">
+    <img src="./images/doctor-icon.svg" alt="Dr. Aisha Khan">
+    <div class="provider-info">
+      <h3>Dr. Aisha Khan</h3>
+      <p>Dermatologist — Kisumu</p>
+      <p>Available Now ✅</p>
+      <p class="stars">★★★★☆</p>
+    </div>
+    <a href="./profile-sarah-johnson.html" class="view-link">View Profile</a>
+  </div>
+
+  <script>
+    document.getElementById('searchBtn').addEventListener('click', function() {
+      const location = document.getElementById('locationFilter').value;
+      const specialty = document.getElementById('specialtyFilter').value;
+      const availabilityChecked = document.getElementById('availabilityFilter').checked;
+
+      const cards = document.querySelectorAll('.provider-card');
+
+      cards.forEach(card => {
+        let showCard = true;
+
+        // Check location
+        if (location && card.getAttribute('data-location') !== location) {
+          showCard = false;
+        }
+
+        // Check specialty
+        if (specialty && card.getAttribute('data-specialty') !== specialty) {
+          showCard = false;
+        }
+
+        // Check availabilityfile
+        if (availabilityChecked && card.getAttribute('data-available') !== 'true') {
+          showCard = false;
+        }
+
+        // Final decision
+        if (showCard) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
 </html>

@@ -1,0 +1,110 @@
+/* Background image covers whole page */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+  background: 
+    linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)),
+    url(./images/Is\ It\ Legal\ to\ Have\ Multiple\ Health\ Insurance\ Policies\ in\ the\ UAE_.jpeg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: rgba(0,0,0,0.5);
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #00a884;
+}
+
+
+nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 40px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.cta-buttons .btn {
+  padding: 12px 24px;
+  margin: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-primary {
+  background-color: #1a3c6e;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #2e8b57;
+  color: white;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 60px 40px;
+}
+
+.card {
+  background: rgba(255,255,255,0.85);
+  color: #333;
+  padding: 30px;
+  border-radius: 8px;
+  width: 30%;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  text-align: center;
+}
+
+.card-img {
+  width: 60px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.card h2 {
+  color: #1a3c6e;
+}
+
+.card a {
+  display: inline-block;
+  margin-top: 10px;
+  color: #1a3c6e;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.card a:hover {
+    margin-left: 5px;
+    transition: 0.3s;
+    color: red;
+}
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,0.6);
+  font-size: 14px;
+}
