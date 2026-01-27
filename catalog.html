@@ -1,195 +1,106 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>DawaCare — Drug Catalog</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background:
-          linear-gradient(rgba(0, 0, 0, 0.446), rgba(0, 0, 0, 0.596)),
-          url(./arpad-czapp-tvP6pCnq9iI-unsplash.jpg) no-repeat center center
-            fixed;
-        background-size: cover;
-      }
-      header {
-        background: #1565c0;
-        color: white;
-        padding: 20px;
-        text-align: center;
-      }
-      nav {
-        background: #0d47a1;
-        padding: 10px;
-        text-align: center;
-      }
-      nav a {
-        color: white;
-        margin: 0 15px;
-        text-decoration: none;
-        font-weight: bold;
-      }
-      .container {
-        max-width: 1100px;
-        margin: 20px auto;
-        padding: 10px;
-      }
-      /* Search bar styling */
-      .card h2 {
-        color: #1565c0;
-        margin-bottom: 10px;
-      }
-      .search-bar {
-        width: 100%;
-        padding: 12px;
-        margin-bottom: 20px;
-        border: 1px solid #ccc;
-        border-radius: 6px;
-        font-size: 16px;
-      }
-      .drug-card {
-        background: white;
-        border-radius: 10px;
-        padding: 20px;
-        margin-bottom: 20px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./catalog.css">
+</head>
+<body>
 
-      .container h2 {
-        color: #1565c0;
-        margin-bottom: 10px;
-      }
-      .badge {
-        display: inline-block;
-        background: #e8f5e9;
-        color: #2e7d32;
-        padding: 4px 8px;
-        border-radius: 999px;
-        margin-right: 6px;
-      }
-      .price {
-        font-weight: bold;
-        color: #c62828;
-      }
-      footer {
-        background: #eee;
-        text-align: center;
-        padding: 15px;
-        margin-top: 30px;
-      }
-      .container button {
-        background-color: #1565c0;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 6px;
-        cursor: pointer;
-        margin-right: 10px;
-      }
-      .container button:hover {
-        background-color: #0d47a1;
-      }
+  <section class="pharmacy-catalog">
+  <h2>Pharmacy Catalog</h2>
+  <div class="catalog-grid">
 
-      @media (max-width: 600px) {
-        .search-bar {
-          width: 95%;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>DawaCare — Drug Catalog</h1>
-    </header>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./providers.html">Find a Provider</a>
-      <a href="./catalog.html">Pharmacy</a>
-      <a href="./account.html">My Account</a>
-      <a href="./doctor-register.html">Join as a Doctor</a>
-    </nav>
-
-    <div class="container">
-      <h2 id="search-hed">Available Medicines</h2>
-      <input type="text" class="search-bar" placeholder="Search medicines..." />
-      <div class="drug-card">
-        <h2>Paracetamol 500mg</h2>
-        <p>
-          <span class="badge">Pain Relief</span> <span class="badge">OTC</span>
-        </p>
-        <p>Used to relieve mild to moderate pain and reduce fever.</p>
-        <p class="price">Price: KSh 150</p>
-        <button type="submit">Order Medicine</button>
-      </div>
-
-      <div class="drug-card">
-        <h2>Amoxicillin 250mg</h2>
-        <p>
-          <span class="badge">Antibiotic</span>
-          <span class="badge">Prescription Only</span>
-        </p>
-        <p>
-          Treats bacterial infections such as pneumonia, bronchitis, and ear
-          infections.
-        </p>
-        <p class="price">Price: KSh 500</p>
-        <button type="submit">Order Medicine</button>
-      </div>
-
-      <div class="drug-card">
-        <h2>Metformin 500mg</h2>
-        <p>
-          <span class="badge">Diabetes</span>
-          <span class="badge">Prescription Only</span>
-        </p>
-        <p>
-          Helps control blood sugar levels in patients with type 2 diabetes.
-        </p>
-        <p class="price">Price: KSh 800</p>
-        <button type="submit">Order Medicine</button>
-      </div>
-      <div class="drug-card">
-        <h2>Paracetamol 500mg</h2>
-        <p>
-          <span class="badge">Pain Relief</span> <span class="badge">OTC</span>
-        </p>
-        <p>Used to relieve mild to moderate pain and reduce fever.</p>
-        <p class="price">Price: KSh 150</p>
-        <button type="submit">Order Medicine</button>
-      </div>
-
-      <div class="drug-card">
-        <h2>Amoxicillin 250mg</h2>
-        <p>
-          <span class="badge">Antibiotic</span>
-          <span class="badge">Prescription Only</span>
-        </p>
-        <p>
-          Treats bacterial infections such as pneumonia, bronchitis, and ear
-          infections.
-        </p>
-        <p class="price">Price: KSh 500</p>
-        <button type="submit">Order Medicine</button>
-      </div>
-
-      <div class="drug-card">
-        <h2>Metformin 500mg</h2>
-        <p>
-          <span class="badge">Diabetes</span>
-          <span class="badge">Prescription Only</span>
-        </p>
-        <p>
-          Helps control blood sugar levels in patients with type 2 diabetes.
-        </p>
-        <p class="price">Price: KSh 800</p>
-        <button type="submit">Order Medicine</button>
+    <!-- Existing Medicines -->
+    <div class="medicine-card">
+      <img src="./images/user-untitled-LLT9aorJVVc-unsplash.jpg" alt="Paracetamol 500mg" class="medicine-img">
+      <div class="medicine-info">
+        <h3>Paracetamol 500mg</h3>
+        <p>Used for pain relief and fever reduction.</p>
+        <div class="provider">
+          <img src="images/sunrise-logo.png" alt="Sunrise Pharmacy Logo" class="pharmacy-logo">
+          <span><strong>Provided by:</strong> Sunrise Pharmacy</span>
+        </div>
+        <p><strong>Price:</strong> KSh 150</p>
+        <a href="pharmacy-sunrise.html" class="view-link">View Pharmacy</a>
       </div>
     </div>
 
-    <footer>
-      &copy; 2026 DawaCare — Health and privacy compliance is a priority.
-    </footer>
-  </body>
+    <div class="medicine-card">
+      <img src="./images/mufid-majnun-AS7eVsdSgsI-unsplash (1).jpg" alt="Amoxicillin 250mg" class="medicine-img">
+      <div class="medicine-info">
+        <h3>Amoxicillin 250mg</h3>
+        <p>Antibiotic for bacterial infections.</p>
+        <div class="provider">
+          <img src="images/cityhealth-logo.png" alt="City Health Chemist Logo" class="pharmacy-logo">
+          <span><strong>Provided by:</strong> City Health Chemist</span>
+        </div>
+        <p><strong>Price:</strong> KSh 450</p>
+        <a href="pharmacy-cityhealth.html" class="view-link">View Pharmacy</a>
+      </div>
+    </div>
+
+    <div class="medicine-card">
+      <img src="images/insulin.jpg" alt="Insulin Injection" class="medicine-img">
+      <div class="medicine-info">
+        <h3>Insulin Injection</h3>
+        <p>Essential for diabetes management.</p>
+        <div class="provider">
+          <img src="images/medcare-logo.png" alt="MedCare Pharmacy Logo" class="pharmacy-logo">
+          <span><strong>Provided by:</strong> MedCare Pharmacy</span>
+        </div>
+        <p><strong>Price:</strong> KSh 1,200</p>
+        <a href="pharmacy-medcare.html" class="view-link">View Pharmacy</a>
+      </div>
+    </div>
+
+    <!-- New Medicines -->
+    <div class="medicine-card">
+      <img src="images/ibuprofen.jpg" alt="Ibuprofen 200mg" class="medicine-img">
+      <div class="medicine-info">
+        <h3>Ibuprofen 200mg</h3>
+        <p>Anti-inflammatory medicine for pain, swelling, and fever.</p>
+        <div class="provider">
+          <img src="images/greenlife-logo.png" alt="GreenLife Pharmacy Logo" class="pharmacy-logo">
+          <span><strong>Provided by:</strong> GreenLife Pharmacy</span>
+        </div>
+        <p><strong>Price:</strong> KSh 250</p>
+        <a href="pharmacy-greenlife.html" class="view-link">View Pharmacy</a>
+      </div>
+    </div>
+
+    <div class="medicine-card">
+      <img src="images/metformin.jpg" alt="Metformin 500mg" class="medicine-img">
+      <div class="medicine-info">
+        <h3>Metformin 500mg</h3>
+        <p>First-line treatment for type 2 diabetes.</p>
+        <div class="provider">
+          <img src="images/healthplus-logo.png" alt="HealthPlus Pharmacy Logo" class="pharmacy-logo">
+          <span><strong>Provided by:</strong> HealthPlus Pharmacy</span>
+        </div>
+        <p><strong>Price:</strong> KSh 600</p>
+        <a href="pharmacy-healthplus.html" class="view-link">View Pharmacy</a>
+      </div>
+    </div>
+
+    <div class="medicine-card">
+      <img src="images/omeprazole.jpg" alt="Omeprazole 20mg" class="medicine-img">
+      <div class="medicine-info">
+        <h3>Omeprazole 20mg</h3>
+        <p>Used to treat acid reflux and stomach ulcers.</p>
+        <div class="provider">
+          <img src="images/pharmaone-logo.png" alt="PharmaOne Logo" class="pharmacy-logo">
+          <span><strong>Provided by:</strong> PharmaOne</span>
+        </div>
+        <p><strong>Price:</strong> KSh 350</p>
+        <a href="pharmacy-pharmaone.html" class="view-link">View Pharmacy</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  
+</body>
 </html>
