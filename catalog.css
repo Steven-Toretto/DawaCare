@@ -1,6 +1,33 @@
+body{background:
+          linear-gradient(rgba(0, 0, 0, 0.446), rgba(0, 0, 0, 0.596)),
+          url(./arpad-czapp-tvP6pCnq9iI-unsplash.jpg) no-repeat center center
+            fixed;
+        background-size: cover;}
+header {
+      background: rgba(21, 101, 192, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+    nav {
+      background: rgba(13, 71, 161, 0.9);
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+
 .pharmacy-catalog {
   background-color: #f9f9f9;
-  padding: 50px 20px;
+  padding: 30px 20px;
   text-align: center;
 }
 
@@ -16,6 +43,7 @@
   gap: 30px;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 20px;
 }
 
 .medicine-card {

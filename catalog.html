@@ -8,8 +8,33 @@
 </head>
 <body>
 
+  <header>
+    <h1>DawaCare — Browse Medicine</h1>
+    
+  </header>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./providers.html">Find a Provider</a>
+    <a href="./catalog.html">Pharmacy</a>
+    <a href="./upload.html">Pharmacist Upload</a>
+    <a href="./account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </nav>
+
   <section class="pharmacy-catalog">
   <h2>Pharmacy Catalog</h2>
+
+  <!-- Search bar -->
+  <input type="text" id="searchInput" placeholder="Search medicine by name..." style="padding:10px; width:60%; max-width:400px; margin-bottom:20px; border-radius:6px; border:1px solid #ccc;">
+
+  <div class="catalog-grid">
+    <!-- Your medicine cards here -->
+  </div>
+</section>
+
+
+
   <div class="catalog-grid">
 
     <!-- Existing Medicines -->
@@ -23,7 +48,7 @@
           <span><strong>Provided by:</strong> Sunrise Pharmacy</span>
         </div>
         <p><strong>Price:</strong> KSh 150</p>
-        <a href="pharmacy-sunrise.html" class="view-link">View Pharmacy</a>
+        <a href="./pharmacy-sunrise.html" class="view-link">View Pharmacy</a>
       </div>
     </div>
 
@@ -109,7 +134,7 @@
           <span><strong>Provided by:</strong> Sunrise Pharmacy</span>
         </div>
         <p><strong>Price:</strong> KSh 150</p>
-        <a href="pharmacy-sunrise.html" class="view-link">View Pharmacy</a>
+        <a href="./pharmacy-sunrise.html" class="view-link">View Pharmacy</a>
       </div>
     </div>
 
@@ -187,6 +212,22 @@
 
   </div>
 </section>
+
+<script>
+  document.getElementById('searchInput').addEventListener('keyup', function() {
+    const searchValue = this.value.toLowerCase();
+    const cards = document.querySelectorAll('.medicine-card');
+
+    cards.forEach(card => {
+      const name = card.querySelector('h3').textContent.toLowerCase();
+      if (name.includes(searchValue)) {
+        card.style.display = "block";
+      } else {
+        card.style.display = "none";
+      }
+    });
+  });
+</script>
 
   
 </body>

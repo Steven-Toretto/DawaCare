@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Request Medicine / Consultation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    header {
+      background: rgba(21, 101, 192, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+     nav {
+      background: rgba(13, 71, 161, 0.9);
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+    .order-form {
+      max-width: 600px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .order-form h1 {
+      text-align: center;
+      color: #1565C0;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.95em;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background-color: #1565C0;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+    <h1>DawaCare — Find a Provider</h1>
+    
+  </header>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./providers.html">Find a Provider</a>
+    <a href="./catalog.html">Pharmacy</a>
+    <a href="./upload.html">Pharmacist Upload</a>
+    <a href="./account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </nav>
+
+
+  <section class="order-form">
+    <h1>Request Medicine / Consultation</h1>
+    <form id="orderForm">
+      
+      <!-- Patient Info -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email">
+      </div>
+
+      <!-- Request Type -->
+      <div class="form-group">
+        <label for="requestType">Request Type</label>
+        <select id="requestType" name="requestType" required>
+          <option value="">Select...</option>
+          <option value="medicine">Medicine Request</option>
+          <option value="consultation">Consultation Booking</option>
+        </select>
+      </div>
+
+      <!-- Medicine / Consultation Details -->
+      <div class="form-group">
+        <label for="details">Details (Medicine name, dosage, or consultation notes)</label>
+        <textarea id="details" name="details" required></textarea>
+      </div>
+
+      <!-- Pharmacy -->
+      <div class="form-group">
+        <label for="pharmacy">Pharmacy</label>
+        <input type="text" id="pharmacy" name="pharmacy" value="Sunrise Pharmacy" readonly>
+      </div>
+
+      <!-- Submit -->
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('orderForm').addEventListener('submit', function(e) {
+      e.preventDefault(); // Prevent page reload
+
+      // Collect form data
+      const orderData = {
+        name: document.getElementById('name').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        requestType: document.getElementById('requestType').value,
+        details: document.getElementById('details').value,
+        pharmacy: document.getElementById('pharmacy').value
+      };
+
+      // Store in localStorage
+      let orders = JSON.parse(localStorage.getItem('orders')) || [];
+      orders.push(orderData);
+      localStorage.setItem('orders', JSON.stringify(orders));
+
+      // Confirmation
+      alert("✅ Your request was successfull!");
+      document.getElementById('orderForm').reset();
+    });
+  </script>
+
+</body>
+</html>

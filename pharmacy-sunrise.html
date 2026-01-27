@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunrise Pharmacy</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+     header {
+      background: rgba(21, 101, 192, 0.9);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    nav {
+      background: rgba(13, 71, 161, 0.9);
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover { text-decoration: underline; }
+
+
+    .pharmacy-profile {
+      max-width: 900px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .pharmacy-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .pharmacy-logo {
+      width: 80px;
+      height: 80px;
+      object-fit: contain;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .pharmacy-header h1 {
+      color: #1565C0;
+      margin: 10px 0;
+    }
+
+    .contact-info, .hours, .catalog, .trust-signals {
+      margin-bottom: 25px;
+    }
+
+    .contact-info p, .hours p, .catalog li, .trust-signals p {
+      font-size: 0.95em;
+      color: #555;
+    }
+
+    .catalog ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .catalog li {
+      background: #f1f1f1;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .verified {
+      color: green;
+      font-weight: bold;
+    }
+
+    .order-btn {
+      display: block;
+      text-align: center;
+      background-color: #1565C0;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    .order-btn:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+    <header>
+    <h1>DawaCare — Find a Provider</h1>
+  </header>
+
+  <nav>
+    <a href="./index.html">Home</a>
+    <a href="./providers.html">Find a Provider</a>
+    <a href="./catalog.html">Pharmacy</a>
+    <a href="./upload.html">Pharmacist Upload</a>
+    <a href="./account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </nav>
+
+  <section class="pharmacy-profile">
+    <!-- Header -->
+    <div class="pharmacy-header">
+      <img src="./images/pexels-guvo59-33016276.jpg" alt="Sunrise Pharmacy Logo" class="pharmacy-logo">
+      <h1>Sunrise Pharmacy</h1>
+      <p class="verified">✔ Verified Pharmacy</p>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <h2>Contact Details</h2>
+      <p><strong>Phone:</strong> +254 700 123 456</p>
+      <p><strong>Email:</strong> info@sunrisepharmacy.com</p>
+      <p><strong>Address:</strong> Nairobi, Kenya</p>
+      <p><a href="https://maps.google.com?q=Sunrise+Pharmacy+Nairobi" target="_blank">📍 View on Map</a></p>
+    </div>
+
+    <!-- Operating Hours -->
+    <div class="hours">
+      <h2>Operating Hours</h2>
+      <p>Mon–Sat: 8:00 AM – 8:00 PM</p>
+      <p>Sun: Closed</p>
+    </div>
+
+    <!-- Catalog -->
+    <div class="catalog">
+      <h2>Available Medicines</h2>
+      <ul>
+        <li>Paracetamol 500mg – KSh 150</li>
+        <li>Ibuprofen 200mg – KSh 250</li>
+        <li>Omeprazole 20mg – KSh 350</li>
+        <li>Insulin Injection – KSh 1,200</li>
+      </ul>
+    </div>
+
+    <!-- Trust Signals -->
+    <div class="trust-signals">
+      <h2>Trust & Licensing</h2>
+      <p>✔ Licensed by Kenya Pharmacy & Poisons Board</p>
+      <p>⭐ Rated 4.8/5 by 120 patients</p>
+      <p>💬 Testimonials: "Reliable service and fast delivery!"</p>
+    </div>
+
+    <!-- Order Button -->
+    <a href="./order.html" class="order-btn">Request Medicine / Consultation</a>
+  </section>
+
+</body>
+</html>
