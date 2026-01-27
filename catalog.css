@@ -62,6 +62,7 @@
   height: 40px;
   object-fit: contain;
   margin-right: 10px;
+  border-radius: 50%;
 }
 
 .view-link {
