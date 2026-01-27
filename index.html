@@ -1,56 +1,155 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DawaCare</title>
-  <link rel="stylesheet" href="./styles.css" />
-</head>
-<body>
-  <header>
-    <div class="logo">DawaCare</div>
-    <nav>
-      <a href="./index.html">Home</a>
-    <a href="./providers.html">Find a Provider</a>
-    <a href="./catalog.html">Pharmacy</a>
-    <a href="./account.html">My Account</a>
-    <a href="./doctor-register.html">Join as a Doctor</a>
-    </nav>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DawaCare</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo">DawaCare</div>
+        <div class="links">
+          <a href="./index.html">Home</a>
+          <a href="./providers.html">Find a Provider</a>
+          <a href="./catalog.html">Pharmacy</a>
+          <a href="./account.html">My Account</a>
+          <a href="./doctor-register.html">Join as a Doctor</a>
+        </div>
+      </nav>
 
-  <main>
-    <section class="hero">
-      <h1>Your Health, Your Pharmacy, Your Providers</h1>
-      <div class="cta-buttons">
-        <a href="./providers.html" class="btn btn-primary">Explore Providers</a>
-        <a href="./catalog.html" class="btn btn-secondary">Browse Drugs</a>
-      </div>
-    </section>
+      <section class="hero">
+        <h1>Your Health, Your Pharmacy, Your Providers</h1>
+        <div class="cta-buttons">
+          <a href="./providers.html" class="btn btn-primary"
+            >Explore Providers</a
+          >
+          <a href="./catalog.html" class="btn btn-secondary">Browse Drugs</a>
+        </div>
+      </section>
 
-    <section class="services">
-      <div class="card">
-        <img src="../images/icons8-doctor-50.png" alt="Doctor Icon" class="card-img">
-        <h2>Find a Provider</h2>
-        <p>Search for doctors and specialists.</p>
-        <a href="./providers.html">Search Providers &rarr;</a>
-      </div>
-      <div class="card">
-        <img src="../images/icons8-doctors-bag-50.png" alt="Pharmacy Icon" class="card-img">
-        <h2>Pharmacy Catalog</h2>
-        <p>View a wide range of medications.</p>
-        <a href="./catalog.html">View Catalog &rarr;</a>
-      </div>
-      <div class="card">
-        <img src="../images/icons8-hospital-50.png" alt="Hospital Icon" class="card-img">
-        <h2>Join as a Doctor</h2>
-        <p>Connect with patients online.</p>
-        <a href="#">Register Now &rarr;</a>
-      </div>
-    </section>
-  </main>
+      <section class="services">
+        <div class="card">
+          <img
+            src="../images/icons8-doctor-50.png"
+            alt="Doctor Icon"
+            class="card-img"
+          />
+          <h2>Find a Provider</h2>
+          <p>Search for doctors and specialists.</p>
+          <a href="./providers.html">Search Providers &rarr;</a>
+        </div>
+        <div class="card">
+          <img
+            src="../images/icons8-doctors-bag-50.png"
+            alt="Pharmacy Icon"
+            class="card-img"
+          />
+          <h2>Pharmacy Catalog</h2>
+          <p>View a wide range of medications.</p>
+          <a href="./catalog.html">View Catalog &rarr;</a>
+        </div>
+        <div class="card">
+          <img
+            src="../images/icons8-hospital-50.png"
+            alt="Hospital Icon"
+            class="card-img"
+          />
+          <h2>Join as a Doctor</h2>
+          <p>Connect with patients online.</p>
+          <a href="./doctor-register.html">Register Now &rarr;</a>
+        </div>
+      </section>
+    </header>
 
-  <footer>
-    <p>&copy; 2026 DawaCare</p>
-  </footer>
-</body>
+    <main>
+      <section class="health-highlights">
+        <h2>Taking care of your health</h2>
+        <div class="highlight-columns">
+          <!-- Column 1 -->
+          <div class="highlight-box">
+            <div class="icon">&#128172;</div>
+            <!-- Speech bubble icon -->
+            <h3>Health Plans We Accept</h3>
+            <p>
+              We work with a wide range of health plans to make care accessible
+              and affordable for everyone.
+            </p>
+            <a href="plans.html" class="read-more">› Read More</a>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="highlight-box">
+            <div class="icon">&#128100;</div>
+            <!-- Person icon -->
+            <h3>Number 1 Medical Clinic in the Area</h3>
+            <p>
+              Our clinic is trusted by thousands for its quality care,
+              experienced staff, and patient-first approach.
+            </p>
+            <a href="clinic.html" class="read-more">› Read More</a>
+          </div>
+
+          <!-- Column 3 -->
+          <div class="highlight-box">
+            <div class="icon">&#128300;</div>
+            <!-- Stethoscope icon -->
+            <h3>Specialist Doctors</h3>
+            <p>
+              We connect you with top-rated specialists across pediatrics,
+              dermatology, cardiology, and more.
+            </p>
+            <a href="specialists.html" class="read-more">› Read More</a>
+          </div>
+        </div>
+      </section>
+
+   
+      <section class="our-services">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+    <div class="service-box">
+      <img src="images/online-consultation.jpg" alt="Online Consultation">
+      <h3>Online Consultations</h3>
+      <p>Connect with experienced doctors for comprehensive online consultations tailored to your needs. Receive expert medical advice and treatment plans from the comfort of your home.</p>
+    </div>
+    <div class="service-box">
+      <img src="images/prescription-refills.jpg" alt="Prescription Refills">
+      <h3>Prescription Refills</h3>
+      <p>Effortlessly request prescription refills online and have them conveniently delivered to your doorstep. Ensure continuity of your medication without any hassle.</p>
+    </div>
+    <div class="service-box">
+      <img src="images/health-monitoring.jpg" alt="Health Monitoring">
+      <h3>Health Monitoring</h3>
+      <p>Monitor your health vitals and progress through our telehealth platform. Stay informed about your well-being and track your health journey effectively.</p>
+    </div>
+    <div class="service-box">
+      <img src="images/medical-advice.jpg" alt="Medical Advice">
+      <h3>Medical Advice</h3>
+      <p>Reliable medical advice from our team of healthcare professionals. Get answers to your health queries promptly and make informed decisions about your well-being.</p>
+    </div>
+    <div class="service-box">
+      <img src="images/virtual-care-plans.jpg" alt="Virtual Care Plans">
+      <h3>Virtual Care Plans</h3>
+      <p>Benefit from personalized virtual care plans designed to address your specific health concerns. Receive continuous support and guidance for a healthier future.</p>
+    </div>
+    <div class="service-box">
+      <img src="images/second-opinions.jpg" alt="Second Opinions">
+      <h3>Second Opinions</h3>
+      <p>Seek second opinions from specialist doctors through our telehealth platform. Gain clarity on complex medical conditions and explore different treatment options.</p>
+    </div>
+  </div>
+  <div class="reach-out">
+    <a href="contact.html" class="reach-btn">Reach Out</a>
+  </div>
+</section>
+
+
+    </main>
+
+    <footer>
+      <p>&copy; 2026 DawaCare</p>
+    </footer>
+  </body>
 </html>
