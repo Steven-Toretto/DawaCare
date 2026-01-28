@@ -90,6 +90,114 @@
     .submit-btn:hover {
       background-color: #0d47a1;
     }
+
+    /* ---------------- Responsive Design ---------------- */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  header {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.95em;
+  }
+
+  .contact-form {
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  .contact-form h1 {
+    font-size: 1.6em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.9em;
+    padding: 8px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 0.9em;
+  }
+
+  .contact-form {
+    width: 90%;
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  .contact-form h1 {
+    font-size: 1.4em;
+    margin-bottom: 15px;
+  }
+
+  .form-group label {
+    font-size: 0.9em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.85em;
+    padding: 8px;
+  }
+
+  .submit-btn {
+    font-size: 0.9em;
+    padding: 10px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  header {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.85em;
+  }
+
+  .contact-form {
+    width: 95%;
+    margin: 10px auto;
+    padding: 10px;
+  }
+
+  .contact-form h1 {
+    font-size: 1.2em;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 0.8em;
+    padding: 6px;
+  }
+
+  .submit-btn {
+    font-size: 0.85em;
+    padding: 8px;
+  }
+}
+
   </style>
 </head>
 <body>

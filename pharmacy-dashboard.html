@@ -91,6 +91,79 @@
       color: #777;
       margin-top: 20px;
     }
+
+    /* ---------------- Responsive Design ---------------- */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  .dashboard {
+    padding: 20px;
+  }
+
+  table, th, td {
+    font-size: 0.9em;
+  }
+
+  .action-btn {
+    padding: 5px 8px;
+    font-size: 0.85em;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .dashboard {
+    margin: 20px;
+    padding: 15px;
+  }
+
+  table {
+    display: block;
+    width: 100%;
+    overflow-x: auto; /* allow horizontal scroll */
+    -webkit-overflow-scrolling: touch;
+  }
+
+  th, td {
+    white-space: nowrap; /* prevent text wrapping */
+    font-size: 0.85em;
+    padding: 8px;
+  }
+
+  .dashboard h1 {
+    font-size: 1.5em;
+  }
+
+  .action-btn {
+    display: block;
+    margin: 5px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  .dashboard {
+    margin: 10px;
+    padding: 10px;
+  }
+
+  .dashboard h1 {
+    font-size: 1.2em;
+  }
+
+  th, td {
+    font-size: 0.75em;
+    padding: 6px;
+  }
+
+  .action-btn {
+    font-size: 0.75em;
+    padding: 5px;
+  }
+}
+
   </style>
 </head>
 <body>

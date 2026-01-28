@@ -1,5 +1,5 @@
 body{background:
-          linear-gradient(rgba(0, 0, 0, 0.446), rgba(0, 0, 0, 0.596)),
+          linear-gradient(rgba(0, 0, 0, 0.603), rgba(0, 0, 0, 0.603)),
           url(./arpad-czapp-tvP6pCnq9iI-unsplash.jpg) no-repeat center center
             fixed;
         background-size: cover;}
@@ -107,4 +107,115 @@ header {
 
 .view-link:hover {
   background-color: #0d47a1;
+}
+
+/* ---------------- Responsive Design ---------------- */
+
+/* Tablets (max-width: 992px) */
+@media (max-width: 992px) {
+  header {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.95em;
+  }
+
+  .pharmacy-catalog h2 {
+    font-size: 1.6em;
+    margin-bottom: 30px;
+  }
+
+  .medicine-card {
+    padding: 15px;
+  }
+
+  .medicine-img {
+    height: 150px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav a {
+    display: block;
+    margin: 8px 0;
+    font-size: 0.9em;
+  }
+
+  .pharmacy-catalog {
+    padding: 20px 10px;
+  }
+
+  .pharmacy-catalog h2 {
+    font-size: 1.4em;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr; /* single column */
+    gap: 20px;
+    padding: 10px;
+  }
+
+  .medicine-card {
+    padding: 15px;
+  }
+
+  .medicine-img {
+    height: auto;
+  }
+
+  .provider {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .pharmacy-logo {
+    margin-bottom: 8px;
+  }
+
+  .view-link {
+    display: block;
+    text-align: center;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+/* Small Mobile (max-width: 480px) */
+@media (max-width: 480px) {
+  header {
+    font-size: 1em;
+    padding: 10px;
+  }
+
+  nav a {
+    font-size: 0.85em;
+  }
+
+  .pharmacy-catalog h2 {
+    font-size: 1.2em;
+  }
+
+  .medicine-info h3 {
+    font-size: 1em;
+  }
+
+  .medicine-info p {
+    font-size: 0.85em;
+  }
+
+  .view-link {
+    font-size: 0.9em;
+    padding: 10px;
+    width: auto;
+  }
 }
