@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Payment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+    }
+    .payment-box {
+      max-width: 600px;
+      margin: 50px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    h1 {
+      color: #1565C0;
+    }
+    p {
+      font-size: 1em;
+      color: #333;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #1565C0;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+    .btn:hover {
+      background-color: #0d47a1;
+    }
+    #status {
+      margin-top: 20px;
+      font-weight: bold;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <div class="payment-box">
+    <h1>Complete Your Subscription</h1>
+    <p>Please proceed with payment to activate your pharmacy listing.</p>
+    <button class="btn" onclick="simulatePayment()">Pay Now</button>
+    <p id="status"></p>
+  </div>
+
+  <script>
+    function simulatePayment() {
+      document.getElementById('status').innerText = "Processing payment...";
+      setTimeout(() => {
+        document.getElementById('status').innerText = "✅ Payment Successful! Your pharmacy is now active.";
+        // Redirect to dashboard after 2 seconds
+        setTimeout(() => {
+          window.location.href = "pharmacy-dashboard.html";
+        }, 2000);
+      }, 2000); // simulate 2s payment delay
+    }
+  </script>
+</body>
+</html>

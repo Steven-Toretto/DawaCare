@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .dashboard {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .dashboard h1 {
+      text-align: center;
+      color: #1565C0;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #ddd;
+    }
+
+    th, td {
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #1565C0;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    .action-btn {
+      padding: 6px 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+      margin-right: 5px;
+    }
+
+    .verify-btn {
+      background-color: #5cb85c;
+      color: white;
+    }
+
+    .verify-btn:hover {
+      background-color: #4cae4c;
+    }
+
+    .upgrade-btn {
+      background-color: #f0ad4e;
+      color: white;
+    }
+
+    .upgrade-btn:hover {
+      background-color: #ec971f;
+    }
+
+    .delete-btn {
+      background-color: #d9534f;
+      color: white;
+    }
+
+    .delete-btn:hover {
+      background-color: #c9302c;
+    }
+
+    .no-pharmacies {
+      text-align: center;
+      color: #777;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="dashboard">
+    <h1>Pharmacy Dashboard</h1>
+    <div id="pharmacyContainer"></div>
+  </section>
+
+  <script>
+    function loadPharmacies() {
+      const pharmacies = JSON.parse(localStorage.getItem('pharmacies')) || [];
+      const container = document.getElementById('pharmacyContainer');
+
+      if (pharmacies.length === 0) {
+        container.innerHTML = "<p class='no-pharmacies'>No pharmacies registered.</p>";
+        return;
+      }
+
+      let tableHTML = `
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>License</th>
+              <th>Contact</th>
+              <th>Email</th>
+              <th>Address</th>
+              <th>Plan</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+      `;
+
+      pharmacies.forEach((pharmacy, index) => {
+        tableHTML += `
+          <tr>
+            <td>${pharmacy.name}</td>
+            <td>${pharmacy.license}</td>
+            <td>${pharmacy.contact}</td>
+            <td>${pharmacy.email}</td>
+            <td>${pharmacy.address}</td>
+            <td>${pharmacy.plan}</td>
+            <td>
+              <button class="action-btn verify-btn" onclick="verifyPharmacy(${index})">Verify</button>
+              <button class="action-btn upgrade-btn" onclick="upgradePharmacy(${index})">Upgrade</button>
+              <button class="action-btn delete-btn" onclick="deletePharmacy(${index})">Delete</button>
+            </td>
+          </tr>
+        `;
+      });
+
+      tableHTML += "</tbody></table>";
+      container.innerHTML = tableHTML;
+    }
+
+    function verifyPharmacy(index) {
+      let pharmacies = JSON.parse(localStorage.getItem('pharmacies')) || [];
+      pharmacies[index].plan = "Verified";
+      localStorage.setItem('pharmacies', JSON.stringify(pharmacies));
+      alert("✔ Pharmacy verified successfully!");
+      loadPharmacies();
+    }
+
+    function upgradePharmacy(index) {
+      let pharmacies = JSON.parse(localStorage.getItem('pharmacies')) || [];
+      pharmacies[index].plan = "Premium";
+      localStorage.setItem('pharmacies', JSON.stringify(pharmacies));
+      alert("⭐ Pharmacy upgraded to Premium!");
+      loadPharmacies();
+    }
+
+    function deletePharmacy(index) {
+      let pharmacies = JSON.parse(localStorage.getItem('pharmacies')) || [];
+      pharmacies.splice(index, 1);
+      localStorage.setItem('pharmacies', JSON.stringify(pharmacies));
+      alert("🗑️ Pharmacy deleted successfully!");
+      loadPharmacies();
+    }
+
+    window.addEventListener('DOMContentLoaded', loadPharmacies);
+  </script>
+
+</body>
+</html>

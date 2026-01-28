@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pharmacy Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .registration-form {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .registration-form h1 {
+      text-align: center;
+      color: #1565C0;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.95em;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background-color: #1565C0;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="registration-form">
+    <h1>Pharmacy Registration</h1>
+    <form id="pharmacyForm">
+      
+      <div class="form-group">
+        <label for="pharmacyName">Pharmacy Name</label>
+        <input type="text" id="pharmacyName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="license">License Number</label>
+        <input type="text" id="license" required>
+      </div>
+
+      <div class="form-group">
+        <label for="contact">Contact Phone</label>
+        <input type="tel" id="contact" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Contact Email</label>
+        <input type="email" id="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="address">Physical Address</label>
+        <textarea id="address" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="logo">Pharmacy Logo URL</label>
+        <input type="text" id="logo" required>
+      </div>
+
+      <div class="form-group">
+        <label for="plan">Subscription Plan</label>
+        <select id="plan" required>
+          <option value="">Select...</option>
+          <option value="basic">Basic (Free Listing)</option>
+          <option value="premium">Premium (Highlighted + Verified Badge)</option>
+        </select>
+      </div>
+
+      <button type="submit" class="submit-btn">Register Pharmacy</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('pharmacyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const pharmacy = {
+        name: document.getElementById('pharmacyName').value,
+        license: document.getElementById('license').value,
+        contact: document.getElementById('contact').value,
+        email: document.getElementById('email').value,
+        address: document.getElementById('address').value,
+        logo: document.getElementById('logo').value,
+        plan: document.getElementById('plan').value
+      };
+
+      let pharmacies = JSON.parse(localStorage.getItem('pharmacies')) || [];
+      pharmacies.push(pharmacy);
+      localStorage.setItem('pharmacies', JSON.stringify(pharmacies));
+
+      alert("✅ Pharmacy registered successfully!");
+
+      // Redirect to payment page
+      window.location.href = "payment.html";
+    });
+  </script>
+
+</body>
+</html>
