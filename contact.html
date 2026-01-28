@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact & Booking | DawaCare</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f9f9f9;
+    }
+
+    .contact-form {
+      max-width: 700px;
+      margin: 40px auto;
+      background: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .contact-form h1 {
+      text-align: center;
+      color: #1565C0;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+      color: #333;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+      font-size: 0.95em;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 100px;
+    }
+
+    .submit-btn {
+      display: block;
+      width: 100%;
+      background-color: #1565C0;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <section class="contact-form">
+    <h1>Reach Out to DawaCare</h1>
+    <form id="contactForm">
+      
+      <div class="form-group">
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email">
+      </div>
+
+      <div class="form-group">
+        <label for="service">Service Type</label>
+        <select id="service" required>
+          <option value="">Select...</option>
+          <option value="Online Consultation">Online Consultation</option>
+          <option value="Prescription Refill">Prescription Refill</option>
+          <option value="Health Monitoring">Health Monitoring</option>
+          <option value="Medical Advice">Medical Advice</option>
+          <option value="Virtual Care Plan">Virtual Care Plan</option>
+          <option value="Second Opinion">Second Opinion</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Message / Request</label>
+        <textarea id="message" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Request</button>
+    </form>
+  </section>
+
+  <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const request = {
+        name: document.getElementById('fullName').value,
+        phone: document.getElementById('phone').value,
+        email: document.getElementById('email').value,
+        service: document.getElementById('service').value,
+        message: document.getElementById('message').value
+      };
+
+      let requests = JSON.parse(localStorage.getItem('dawacareRequests')) || [];
+      requests.push(request);
+      localStorage.setItem('dawacareRequests', JSON.stringify(requests));
+
+      alert("✅ Your request has been submitted!");
+      document.getElementById('contactForm').reset();
+    });
+  </script>
+
+</body>
+</html>
