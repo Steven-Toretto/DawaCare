@@ -22,7 +22,7 @@
       }
       nav {
         background: #0d47a1;
-        padding: 10px;
+        padding: 30px 10px;
         text-align: center;
       }
       nav a {
@@ -54,7 +54,7 @@
       form input,
       form textarea,
       form select {
-        width: 100%;
+        width: 95%;
         padding: 8px;
         margin: 6px 0;
         border: 1px solid #ccc;
@@ -87,18 +87,103 @@
         padding: 15px;
         margin-top: 30px;
       }
+ 
+      /* Default: hamburger hidden, nav links visible */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+}
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  header {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  .container {
+    margin: 15px;
+    padding: 10px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4em;
+    line-height: 1.2;
+  }
+
+  nav {
+    position: relative;
+    text-align: left;
+  }
+
+  /* Show hamburger only on small screens */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #0d47a1;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+
+  .card {
+    padding: 15px;
+    text-align: center;
+  }
+
+  form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
     </style>
   </head>
   <body>
-    <header><h1>DawaCare — My Account</h1></header>
-    <nav>
-      <a href="./index.html">Home</a>
-      <a href="./providers.html">Find a Provider</a>
-      <a href="./catalog.html">Pharmacy</a>
-      <a href="./upload.html">Pharmacist Upload</a>
-      <a href="./account.html">My Account</a>
-      <a href="./doctor-register.html">Join as a Doctor</a>
-    </nav>
+    <header>
+  <h1>DawaCare — My Account</h1>
+</header>
+
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links">
+    <a href="./index.html">Home</a>
+    <a href="./providers.html">Find a Provider</a>
+    <a href="./catalog.html">Pharmacy</a>
+    <a href="./upload.html">Pharmacist Upload</a>
+    <a href="./account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </div>
+</nav>
+
 
     <div class="container">
       <!-- Editable Profile Section -->
@@ -321,5 +406,13 @@ Pharmacy visit</textarea
     <footer>
       &copy; 2026 DawaCare — Health and privacy compliance is a priority.
     </footer>
+
+    <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
   </body>
 </html>

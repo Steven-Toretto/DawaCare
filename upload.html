@@ -5,22 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pharmacy Medicine Upload</title>
   <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
     body {
       font-family: Arial, sans-serif;
-      margin: 0;
       background-color: #f9f9f9;
     }
 
     header {
       background: rgba(21, 101, 192, 0.9);
       color: white;
-      padding: 20px;
+      padding: 10px;
       text-align: center;
       width: 100%;
     }
     nav {
       background: rgba(13, 71, 161, 0.9);
-      padding: 10px;
+      padding: 30px 0;
       text-align: center;
       width: 100%;
     }
@@ -53,7 +56,7 @@
     }
 
     .upload-form input, .upload-form textarea {
-      width: 100%;
+      width: 90%;
       padding: 10px;
       margin-top: 5px;
       border-radius: 6px;
@@ -141,23 +144,169 @@
     .view-link:hover {
       background-color: #0d47a1;
     }
+
+    /* Hamburger icon hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+}
+
+/* Tablet screens */
+@media (max-width: 992px) {
+ @media (max-width: 768px) {
+  header {
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+}
+
+
+  nav a {
+    margin: 0 10px;
+    font-size: 0.95em;
+  }
+
+  .upload-form, .pharmacy-catalog {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .catalog-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+  .medicine-img {
+    height: 150px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+
+
+  @media (max-width: 768px) {
+  header {
+    padding: 15px;
+    font-size: 1.1em;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.5em;
+    line-height: 1.2;
+    word-wrap: break-word;
+  }
+}
+
+
+  nav {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* Show hamburger only on small screens */
+  .hamburger {
+    display: block;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(13, 71, 161, 0.95);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  nav a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1em;
+  }
+
+  .upload-form, .pharmacy-catalog {
+    margin: 15px;
+    padding: 15px;
+    width: 90%;
+  }
+
+  .catalog-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .medicine-card {
+    padding: 15px;
+    text-align: center;
+  }
+
+  .medicine-img {
+    height: 120px;
+  }
+
+  .provider {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .pharmacy-logo {
+    margin-bottom: 10px;
+  }
+
+  .view-link {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+
+
+
   </style>
 </head>
 <body>
 
     <header>
-    <h1>DawaCare — Upload Medicine</h1>
-    
-  </header>
+  <h1>DawaCare — Upload Medicine</h1>
+</header>
 
-  <nav>
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links">
     <a href="./index.html">Home</a>
     <a href="./providers.html">Find a Provider</a>
     <a href="./catalog.html">Pharmacy</a>
     <a href="./upload.html">Pharmacist Upload</a>
     <a href="./account.html">My Account</a>
     <a href="./doctor-register.html">Join as a Doctor</a>
-  </nav>
+  </div>
+</nav>
 
   <!-- Upload Form -->
   <section class="upload-form">
@@ -184,6 +333,14 @@
       <button type="submit">Upload Medicine</button>
     </form>
   </section>
+  
+  <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
 
 
   <script>

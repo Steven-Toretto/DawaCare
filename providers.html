@@ -21,9 +21,15 @@
     }
     nav {
       background: rgba(13, 71, 161, 0.9);
-      padding: 10px;
+      padding: 30px 10px;
       text-align: center;
     }
+  .logo{
+    display: none;
+  }
+  .hamburger{
+    display: none;
+  }
     nav a {
       color: white;
       margin: 0 15px;
@@ -97,21 +103,124 @@
     .view-link:hover {
       background-color: #0d47a1;
     }
+
+/* Small screen responsiveness */
+@media (max-width: 768px) {
+  nav {
+    position: relative;
+    text-align: left;
+  }
+
+  .hamburger {
+    display: block;
+    font-size: 1.8em;
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(13, 71, 161, 0.95);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .provider-card {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .provider-card img {
+    margin: 0 auto 10px auto;
+  }
+
+  .view-link {
+    margin-top: 10px;
+    display: inline-block;
+  }
+}
+/* Tablet screens */
+@media (max-width: 992px) {
+  .filters {
+    padding: 10px;
+  }
+
+  .filters label, 
+  .filters select {
+    margin: 5px;
+    font-size: 0.95em;
+  }
+
+  .filters button {
+    padding: 6px 12px;
+    font-size: 0.95em;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: left;
+  }
+
+  .filters label, 
+  .filters select {
+    margin: 8px 0;
+    width: 100%;
+    font-size: 1em;
+  }
+
+  .filters button {
+    margin-top: 10px;
+    width: 100%;
+    font-size: 1em;
+  }
+}
+
+
   </style>
 </head>
 <body>
   <header>
-    <h1>DawaCare — Find a Provider</h1>
-  </header>
+  <h1>DawaCare — Find a Provider</h1>
+</header>
 
-  <nav>
+<nav>
+  <div class="logo" style="color: #fff;">DawaCare</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links">
     <a href="./index.html">Home</a>
     <a href="./providers.html">Find a Provider</a>
     <a href="./catalog.html">Pharmacy</a>
     <a href="./upload.html">Pharmacist Upload</a>
+    <a href="./register-pharmacy.html">Pharmacy Registration</a>
     <a href="./account.html">My Account</a>
     <a href="./doctor-register.html">Join as a Doctor</a>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Filters -->
   <div class="filters">
@@ -224,6 +333,14 @@
   </div>
 
   <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
+
+  <script>
     document.getElementById('searchBtn').addEventListener('click', function() {
       const location = document.getElementById('locationFilter').value;
       const specialty = document.getElementById('specialtyFilter').value;
@@ -258,5 +375,6 @@
       });
     });
   </script>
+
 </body>
 </html>

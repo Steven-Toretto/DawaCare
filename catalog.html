@@ -8,19 +8,23 @@
 </head>
 <body>
 
-  <header>
-    <h1>DawaCare — Browse Medicine</h1>
     
-  </header>
+  <header>
+  <h1>DawaCare — Browse Medicine</h1>
+</header>
 
-  <nav>
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links">
     <a href="./index.html">Home</a>
     <a href="./providers.html">Find a Provider</a>
     <a href="./catalog.html">Pharmacy</a>
     <a href="./upload.html">Pharmacist Upload</a>
     <a href="./account.html">My Account</a>
     <a href="./doctor-register.html">Join as a Doctor</a>
-  </nav>
+  </div>
+</nav>
+
 
   <section class="pharmacy-catalog">
   <h2>Pharmacy Catalog</h2>
@@ -212,6 +216,14 @@
 
   </div>
 </section>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
 
 <script>
   document.getElementById('searchInput').addEventListener('keyup', function() {

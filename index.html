@@ -8,17 +8,19 @@
   </head>
   <body>
     <nav>
-        <div class="logo">DawaCare</div>
-        <div class="links">
-          <a href="./index.html">Home</a>
-          <a href="./providers.html">Find a Provider</a>
-          <a href="./catalog.html">Pharmacy</a>
-          <a href="./upload.html">Pharmacist Upload</a>
-          <a href="./register-pharmacy.html">Pharmacy Registration</a>
-          <a href="./account.html">My Account</a>
-          <a href="./doctor-register.html">Join as a Doctor</a>
-        </div>
-      </nav>
+  <div class="logo">DawaCare</div>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="links">
+    <a href="./index.html">Home</a>
+    <a href="./providers.html">Find a Provider</a>
+    <a href="./catalog.html">Pharmacy</a>
+    <a href="./upload.html">Pharmacist Upload</a>
+    <a href="./register-pharmacy.html">Pharmacy Registration</a>
+    <a href="./account.html">My Account</a>
+    <a href="./doctor-register.html">Join as a Doctor</a>
+  </div>
+</nav>
+
     <header>
       
 
@@ -189,5 +191,13 @@
     <footer>
       <p>&copy; 2026 DawaCare</p>
     </footer>
+
+    <script>
+  function toggleMenu() {
+    const links = document.querySelector('.links');
+    links.style.display = links.style.display === 'flex' ? 'none' : 'flex';
+  }
+</script>
+
   </body>
 </html>

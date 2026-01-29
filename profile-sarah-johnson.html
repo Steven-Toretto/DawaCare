@@ -74,6 +74,72 @@
     .btn:hover {
       background: #005f66;
     }
+
+    /* Tablet screens */
+@media (max-width: 992px) {
+  .profile-container {
+    padding: 20px;
+  }
+
+  .profile-header img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.8em;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .profile-container {
+    padding: 15px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .profile-header img {
+    width: 120px;
+    height: 120px;
+    margin-bottom: 15px;
+  }
+
+  .profile-header h1 {
+    font-size: 1.5em;
+  }
+
+  .profile-header p {
+    font-size: 0.95em;
+  }
+
+  .section h2 {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .section p {
+    font-size: 0.95em;
+    text-align: center;
+  }
+
+  .btn {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 15px;
+  }
+}
+
   </style>
 </head>
 <body>
@@ -106,6 +172,7 @@
     </div>
 
     <a href="./providers.html" class="btn">← Back to Search</a>
+    <a href="./providers.html" class="btn">← Hire</a>
   </div>
 
 </body>

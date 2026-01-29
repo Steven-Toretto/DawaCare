@@ -20,7 +20,7 @@
     }
     nav {
       background: rgba(13, 71, 161, 0.9);
-      padding: 10px;
+      padding: 30px 10px;
       text-align: center;
     }
     nav a {
@@ -69,22 +69,103 @@
     form button:hover {
       background-color: #0d47a1;
     }
+
+    /* Default: hamburger hidden, nav links visible */
+.hamburger {
+  display: none;
+  font-size: 1.8em;
+  cursor: pointer;
+  color: white;
+}
+
+/* Tablet screens */
+@media (max-width: 992px) {
+  header {
+    padding: 15px;
+    font-size: 1.2em;
+  }
+
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+}
+
+/* Mobile screens */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.4em;
+    line-height: 1.2;
+  }
+
+  nav {
+    position: relative;
+    text-align: left;
+  }
+
+  /* Show hamburger only on small screens */
+  .hamburger {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    z-index: 1000;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(13, 71, 161, 0.95);
+    position: absolute;
+    top: 50px;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links a {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1em;
+  }
+
+  .container {
+    margin: 15px;
+    padding: 15px;
+  }
+
+  form button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}
+
+
   </style>
 </head>
 <body>
   <header>
-    <h1>DawaCare — Doctor Registration</h1>
-  </header>
+  <h1>DawaCare — Doctor Registration</h1>
+</header>
 
-  <!-- Navigation bar -->
-  <nav>
+<nav>
+  <div class="hamburger" onclick="toggleMenu()">☰</div>
+  <div class="nav-links">
     <a href="index.html">Home</a>
     <a href="providers.html">Find a Provider</a>
     <a href="catalog.html">Pharmacy</a>
-    <a href="./upload.html">Pharmacist Upload</a>
+    <a href="upload.html">Pharmacist Upload</a>
     <a href="account.html">My Account</a>
-    <a href="./doctor-register.html">Join as a Doctor</a>
-  </nav>
+    <a href="doctor-register.html">Join as a Doctor</a>
+  </div>
+</nav>
+
 
   <div class="container">
     <h2>Register as a Doctor</h2>
@@ -110,5 +191,13 @@
       <button type="submit">Submit Details</button>
     </form>
   </div>
+
+  <script>
+  function toggleMenu() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
 </body>
 </html>
