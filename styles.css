@@ -28,7 +28,9 @@ nav a {
   font-weight: 500;
   padding: 0 10px;
 }
-
+.hamburger{
+  display: none;
+}
 /* Header */
 header {
   background:
